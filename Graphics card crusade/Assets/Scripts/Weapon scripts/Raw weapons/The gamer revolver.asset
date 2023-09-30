@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ff9b1ee2262ae45b10f1a7e3c3d14e, type: 3}
+  m_Name: The gamer revolver
+  m_EditorClassIdentifier: 
+  name: Fucked revolver
+  impactEffects:
+  - {fileID: 7707326698557446319, guid: 9d0c88743943ecf47a522849c0501528, type: 3}
+  - {fileID: 2738598668422205188, guid: c0669129f54c5c541824f0b1bac66a9e, type: 3}
+  enemyImpactEffects:
+  - {fileID: 3781467489790499195, guid: 52c5c398d62fabc409d8c337d858b689, type: 3}
+  hasShotLine: 1
+  bullet: {fileID: 0}
+  bulletSpeed: 300
+  damage: 10
+  fireRate: 2.4
+  impactForce: 600
+  isRyacast: 1
+  isProjectile: 0
+  isParticleBased: 0
+  hasSpread: 0
+  layerToDamage:
+    serializedVersion: 2
+    m_Bits: 256
