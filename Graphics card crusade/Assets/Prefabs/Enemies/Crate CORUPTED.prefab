@@ -964,7 +964,7 @@ MonoBehaviour:
   onAttackEffect: {fileID: 0}
   chaseRange: 80
   turnSpeed: 5
-  health: 80
+  health: 20
   damage: 0
   enemyHitParticles:
   - {fileID: 8676109424289313617, guid: 4d6d706db7175ea448fd3f35de11b6d0, type: 3}

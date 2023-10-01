@@ -380,8 +380,8 @@ MonoBehaviour:
   onAttackEffect: {fileID: 0}
   chaseRange: 9.98
   turnSpeed: 10
-  health: 50
-  damage: 10
+  health: 40
+  damage: 15
   enemyHitParticles:
   - {fileID: 8676109424289313617, guid: 4d6d706db7175ea448fd3f35de11b6d0, type: 3}
   - {fileID: 4176183516891276918, guid: 9f8c4ce7425665f46b2907fbdb178ff9, type: 3}
@@ -389,7 +389,6 @@ MonoBehaviour:
   hasGibs: 1
   gibs: {fileID: 7016683798515632752, guid: 7e60e0c178313c54f80c5b8dbb2be984, type: 3}
   isParticle: 1
-  isExplosive: 0
   shockTime: 0.3
   target: {fileID: 0}
   isProvoked: 0

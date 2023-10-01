@@ -178,7 +178,7 @@ public class PlayerMovement : MonoBehaviour
         Friction();
 
         movement = orientation.right * xMovement + orientation.forward * yMovement;
-        rb.AddForce(movement * (movementSpeed * 10) * Time.deltaTime);
+        rb.AddForce(movement * (movementSpeed * 10) * Time.deltaTime, ForceMode.Force);
 
         RaycastHit _hit;
         if(Physics.Raycast(transform.position, -transform.up, out _hit, groundCheckRange))
