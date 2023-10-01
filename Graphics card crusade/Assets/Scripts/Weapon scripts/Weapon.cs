@@ -44,6 +44,9 @@ public class Weapon : MonoBehaviour
     [Header("VFX")]
     [SerializeField] LineRenderer shotLine;
     [SerializeField] ParticleSystem[] muzzleFlashes;
+    [SerializeField] bool hasShellCasings;
+    [SerializeField] bool isOnReload;
+    [SerializeField] ParticleSystem shellCasing;
 
     [Header("Particle bullet(if needed")]
     [SerializeField] bool isLazer;
@@ -227,6 +230,9 @@ public class Weapon : MonoBehaviour
         gunAnim.SetBool("Idle", false);
         gunAnim.SetBool("Shooting", true);
 
+        if(!isOnReload)
+            CreateVFX();
+
         camShake.ShakeCamera();
 
         for(int i = 0; i < muzzleFlashes.Length; i++) { muzzleFlashes[i].Play(); }
@@ -399,6 +405,7 @@ public class Weapon : MonoBehaviour
     {
         Enemy enemy = _hit.transform.GetComponent<Enemy>();
         Shield shield = _hit.transform.GetComponent<Shield>();
+
         if(enemy != null)
         {
             enemy.DamageEnemy(gunDamage);
@@ -432,6 +439,14 @@ public class Weapon : MonoBehaviour
         {
             GameObject impactObj = Instantiate(impct, _hit.point, Quaternion.LookRotation(_hit.normal));
             Destroy(impactObj, 1f);
+        }
+    }
+
+    public void CreateVFX()
+    {
+        if(hasShellCasings)
+        {
+            shellCasing.Emit(1);
         }
     }
 

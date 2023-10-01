@@ -1300,6 +1300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasAnimations: 1
+  hasDeathAnim: 1
   isDrone: 0
   isStill: 0
   hasIdle: 0
@@ -1318,13 +1319,17 @@ MonoBehaviour:
   bulletSpeed: 50
   fireRate: 3
   onAttackEffect: {fileID: 0}
-  chaseRange: 19
+  chaseRange: 100
   turnSpeed: 10
   health: 16
   damage: 20
-  gibs: {fileID: 0}
-  isParticle: 0
-  isExplosive: 0
+  enemyHitParticles:
+  - {fileID: 8676109424289313617, guid: 4d6d706db7175ea448fd3f35de11b6d0, type: 3}
+  - {fileID: 4176183516891276918, guid: 9f8c4ce7425665f46b2907fbdb178ff9, type: 3}
+  - {fileID: 4721632214715021497, guid: a728558da78db4945bb13175da60be89, type: 3}
+  hasGibs: 1
+  gibs: {fileID: 7016683798515632752, guid: 7e60e0c178313c54f80c5b8dbb2be984, type: 3}
+  isParticle: 1
   shockTime: 0.3
   target: {fileID: 0}
   isProvoked: 1
@@ -1342,7 +1347,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 19
+  m_StoppingDistance: 100
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1

@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasAnimations: 1
+  hasDeathAnim: 1
   isDrone: 0
   isStill: 0
   hasIdle: 1
@@ -381,8 +382,13 @@ MonoBehaviour:
   turnSpeed: 10
   health: 50
   damage: 10
-  gibs: {fileID: 0}
-  isParticle: 0
+  enemyHitParticles:
+  - {fileID: 8676109424289313617, guid: 4d6d706db7175ea448fd3f35de11b6d0, type: 3}
+  - {fileID: 4176183516891276918, guid: 9f8c4ce7425665f46b2907fbdb178ff9, type: 3}
+  - {fileID: 4721632214715021497, guid: a728558da78db4945bb13175da60be89, type: 3}
+  hasGibs: 1
+  gibs: {fileID: 7016683798515632752, guid: 7e60e0c178313c54f80c5b8dbb2be984, type: 3}
+  isParticle: 1
   isExplosive: 0
   shockTime: 0.3
   target: {fileID: 0}

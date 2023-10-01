@@ -82,6 +82,8 @@ public class PlayerMovement : MonoBehaviour
     private float xRotation;
     private float yRotation;
 
+    private Quaternion camRot;
+
     RaycastHit _groundHit;
 
     private bool jumping;
@@ -90,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController _Player;
     private Rigidbody rb;
     private Camera _cam;
+    private ShakeDaCamera camShake;
 
     // Start is called before the first frame update
     void Start()
@@ -97,6 +100,9 @@ public class PlayerMovement : MonoBehaviour
         _Player = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody>();
         _cam = cam.GetComponentInChildren<Camera>();
+        camShake = _cam.GetComponent<ShakeDaCamera>();
+
+        camRot = _cam.transform.rotation;
 
         Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
@@ -158,6 +164,9 @@ public class PlayerMovement : MonoBehaviour
     {   
         velocity.y += gravity * Time.deltaTime;
         rb.AddForce(velocity * Time.deltaTime);
+
+        //if(movementSpeed != 0f)
+            //camShake.MoreShakeCam((movementSpeed /(movementSpeed/100f)) /100f, (movementSpeed /(movementSpeed /100f)) /100f);
 
         if(isGrounded && velocity.y < 0)
         {

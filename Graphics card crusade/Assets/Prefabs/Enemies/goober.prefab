@@ -531,6 +531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasAnimations: 1
+  hasDeathAnim: 1
   isDrone: 0
   isStill: 0
   hasIdle: 1
@@ -556,9 +557,9 @@ MonoBehaviour:
   enemyHitParticles:
   - {fileID: 4721632214715021497, guid: a728558da78db4945bb13175da60be89, type: 3}
   - {fileID: 4176183516891276918, guid: 9f8c4ce7425665f46b2907fbdb178ff9, type: 3}
+  hasGibs: 1
   gibs: {fileID: 7016683798515632752, guid: e80685cff02ff6246acd8f2f8e57c5e5, type: 3}
   isParticle: 1
-  isExplosive: 0
   shockTime: 0.3
   target: {fileID: 0}
   isProvoked: 0

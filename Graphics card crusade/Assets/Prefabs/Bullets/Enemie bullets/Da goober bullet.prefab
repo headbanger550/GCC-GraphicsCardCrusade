@@ -112,7 +112,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   detectionRange: 0.8
-  detectionSize: 1.03
+  detectionSize: 1.3
+  noHitMask:
+    serializedVersion: 2
+    m_Bits: 256
   isFromAbove: 0
   otherBullet: {fileID: 0}
   abovePos: {x: 0, y: 0, z: 0}

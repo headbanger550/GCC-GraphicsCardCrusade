@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4133936637816720707}
   - component: {fileID: 4657813728821296093}
   - component: {fileID: 3865756454372304642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 7143158980662179456}
   - component: {fileID: 6487183827468110791}
   - component: {fileID: 4729770714157780736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 460712168049118363}
   - component: {fileID: 460712168049118362}
   - component: {fileID: 7005481580728088068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: The Claymore Roomba
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,11 +291,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasAnimations: 0
+  hasDeathAnim: 0
   isDrone: 1
   isStill: 0
   hasIdle: 0
+  isCoruptable: 0
+  coruptedVariant: {fileID: 0}
   doesSpot: 0
   obstructionMask:
+    serializedVersion: 2
+    m_Bits: 0
+  enemyMask:
     serializedVersion: 2
     m_Bits: 0
   enemyTypeID: 0
@@ -308,10 +314,12 @@ MonoBehaviour:
   turnSpeed: 5
   health: 20
   damage: 4
+  enemyHitParticles: []
+  hasGibs: 1
   gibs: {fileID: 53310394272507104, guid: e16c832a45e32234bae7d1e3b6edb7c1, type: 3}
   isParticle: 1
-  isExplosive: 1
   shockTime: 0
+  target: {fileID: 0}
   isProvoked: 0
 --- !u!65 &7005481580728088068
 BoxCollider:
@@ -337,7 +345,7 @@ GameObject:
   - component: {fileID: 4955774269240163419}
   - component: {fileID: 3551917458846134645}
   - component: {fileID: 7606355503063007532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +426,7 @@ GameObject:
   - component: {fileID: 7221134791374473773}
   - component: {fileID: 9156618069568509670}
   - component: {fileID: 9110969294634162355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -499,7 +507,7 @@ GameObject:
   - component: {fileID: 591043836948416707}
   - component: {fileID: 8431862712360980536}
   - component: {fileID: 4493585074675215470}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +588,7 @@ GameObject:
   - component: {fileID: 898889279553001900}
   - component: {fileID: 2078237172086967370}
   - component: {fileID: 6299131290761455792}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -661,7 +669,7 @@ GameObject:
   - component: {fileID: 2643047458195236449}
   - component: {fileID: 8439492288193236278}
   - component: {fileID: 7395090602635652406}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +750,7 @@ GameObject:
   - component: {fileID: 6346869062605032640}
   - component: {fileID: 2452066503755472461}
   - component: {fileID: 6194197508989145346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -823,7 +831,7 @@ GameObject:
   - component: {fileID: 163854066719366627}
   - component: {fileID: 1697102950923901835}
   - component: {fileID: 8036040462959493635}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,7 +912,7 @@ GameObject:
   - component: {fileID: 2150411871571239999}
   - component: {fileID: 6464711613240746072}
   - component: {fileID: 5033295417138110577}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -985,7 +993,7 @@ GameObject:
   - component: {fileID: 4961483706220470917}
   - component: {fileID: 2584082504394879859}
   - component: {fileID: 3114180207262863981}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7271995221402585782}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: The Claymore Roomba WIRES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1096,7 +1104,7 @@ GameObject:
   - component: {fileID: 3606868997289666656}
   - component: {fileID: 2874888608621529677}
   - component: {fileID: 6997969636596093916}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1180,7 +1188,7 @@ GameObject:
   - component: {fileID: 7647926095823895164}
   - component: {fileID: 8020754204042617878}
   - component: {fileID: 5801850306124648431}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BezierCurve.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1261,7 +1269,7 @@ GameObject:
   - component: {fileID: 6279820956792120092}
   - component: {fileID: 3720585579453538780}
   - component: {fileID: 7531230062230329719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cylinder.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1342,7 +1350,7 @@ GameObject:
   - component: {fileID: 4931701479109276148}
   - component: {fileID: 2550135455000157725}
   - component: {fileID: 8948799563172107776}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}

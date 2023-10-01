@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] bool hasAnimations;
+    [SerializeField] bool hasDeathAnim;
     [SerializeField] bool isDrone;
     [SerializeField] bool isStill;
     [SerializeField] bool hasIdle;
@@ -44,9 +45,9 @@ public class Enemy : MonoBehaviour
     [Space]
 
     public GameObject[] enemyHitParticles;
+    [SerializeField] bool hasGibs;
     [SerializeField] GameObject gibs;
     [SerializeField] bool isParticle;
-    [SerializeField] bool isExplosive;
 
     [Space]
 
@@ -251,13 +252,25 @@ public class Enemy : MonoBehaviour
             health -= playerDamage;
             if(health <= 0)
             {
-                Die();
+                if(hasDeathAnim)
+                {
+                    Die();
+                }
+                else
+                {
+                    Gib();
+                }
             }
-            if(health <= -15)
+
+            if(health <= -15 && hasGibs)
             {
                 Gib();
                 Debug.Log("ded");
                 Destroy(gameObject);
+            }
+            else if(health <= -15 && !hasGibs)
+            {
+                Die();
             }
         }
     }
@@ -288,13 +301,19 @@ public class Enemy : MonoBehaviour
             Rigidbody[] rbs = instGibs.GetComponentsInChildren<Rigidbody>();
             foreach(Rigidbody gib in rbs)
             {
-                gib.AddExplosionForce(5f, transform.position, 15f);
+                gib.AddExplosionForce(5000f, transform.position, 15f);
             }
         }
         else
         {
+            Rigidbody[] rbs = instGibs.GetComponentsInChildren<Rigidbody>();
+            foreach(Rigidbody gib in rbs)
+            {
+                gib.AddExplosionForce(10000f, transform.position, 15f);
+            }
             Destroy(instGibs, 0.8f);
         }
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter(Collider coll) 

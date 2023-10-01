@@ -73,11 +73,15 @@ public class EnemyBullet : MonoBehaviour
             }
         }
     }
+    
+    Vector3 ringPos;
 
     //I couldn't find a better way to do this sooooooooooooooooo yea fucking kill me :)
     IEnumerator AirBullet()
     {   
-        ringObj = Instantiate(warningRing, player.position, warningRing.transform.localRotation);  
+        ringObj = Instantiate(warningRing, player.position, warningRing.transform.localRotation); 
+        ringPos = new Vector3(player.position.x, player.position.y + -1.5f, player.position.z);
+        ringObj.transform.position = ringPos;
 
         yield return new WaitForSeconds(2f);
         Destroy(ringObj);
@@ -95,7 +99,7 @@ public class EnemyBullet : MonoBehaviour
             RaycastHit _hit;
             if(Physics.SphereCast(transform.position, detectionSize, Vector3.down, out _hit, detectionRange, noHitMask))
             {
-                CameraShaker.Instance.ShakeOnce(5f, 2f, 0.1f, 2f);
+                CameraShaker.Instance.ShakeOnce(1f, 2f, 0.1f, 2f);
 
                 InstantiateVFX(groundHitVFX, _hit.point);
                 InstantiateVFX(hitVFX, _hit.point);

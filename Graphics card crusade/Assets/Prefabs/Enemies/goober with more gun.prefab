@@ -852,6 +852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasAnimations: 1
+  hasDeathAnim: 1
   isDrone: 0
   isStill: 0
   hasIdle: 0
@@ -870,13 +871,16 @@ MonoBehaviour:
   bulletSpeed: 35
   fireRate: 3
   onAttackEffect: {fileID: 0}
-  chaseRange: 19
+  chaseRange: 100
   turnSpeed: 10
   health: 80
   damage: 10
-  gibs: {fileID: 0}
-  isParticle: 0
-  isExplosive: 0
+  enemyHitParticles:
+  - {fileID: 4721632214715021497, guid: a728558da78db4945bb13175da60be89, type: 3}
+  - {fileID: 4176183516891276918, guid: 9f8c4ce7425665f46b2907fbdb178ff9, type: 3}
+  hasGibs: 1
+  gibs: {fileID: 7016683798515632752, guid: e80685cff02ff6246acd8f2f8e57c5e5, type: 3}
+  isParticle: 1
   shockTime: 0.3
   target: {fileID: 0}
   isProvoked: 1
@@ -894,7 +898,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 19
+  m_StoppingDistance: 80
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -1671,7 +1675,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6753920783863809378}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0.0431}
+  m_LocalPosition: {x: -0, y: 0, z: 0.0541}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6753920784220884814}

@@ -46,11 +46,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   detectionRange: 0
+  detectionSize: 0
+  noHitMask:
+    serializedVersion: 2
+    m_Bits: 896
   isFromAbove: 1
   otherBullet: {fileID: 1191519306573287237, guid: 6e0399f4e03d4e540ad8657c62b12904, type: 3}
   abovePos: {x: 0, y: 15, z: 0}
   warningRing: {fileID: 2477512768863171444, guid: f98d6a52ec4030a479748b836b027522, type: 3}
-  rate: 1
+  isParticle: 0
+  groundHitVFX: {fileID: 0}
+  hitVFX: {fileID: 0}
 --- !u!54 &7502721569870159859
 Rigidbody:
   m_ObjectHideFlags: 0
