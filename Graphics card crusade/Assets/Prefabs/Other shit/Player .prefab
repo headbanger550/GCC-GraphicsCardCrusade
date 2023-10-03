@@ -5730,9 +5730,9 @@ MonoBehaviour:
   crouchScaleAmount: 0.5
   baseScale: {x: 1, y: 1, z: 1}
   slidingSpeed: 1.2
-  movementSpeed: 700
-  maxSpeed: 750
-  maxSpeedCap: 800
+  movementSpeed: 300
+  maxSpeed: 350
+  maxSpeedCap: 450
   airAccel: 0.1
   orientation: {fileID: 2963670370986590578}
   moveThreshold: 0.01
@@ -6197,7 +6197,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8502014034029414539, guid: da68401d5da29c4499bb32b081df4391, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ManageScenes, MainScripts
         m_MethodName: RestartLevel
         m_Mode: 1
@@ -6381,7 +6381,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8502014034029414539, guid: da68401d5da29c4499bb32b081df4391, type: 3}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ManageScenes, MainScripts
         m_MethodName: QuitGame
         m_Mode: 1

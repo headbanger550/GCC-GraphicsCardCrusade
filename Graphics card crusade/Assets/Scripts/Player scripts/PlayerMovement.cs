@@ -153,8 +153,8 @@ public class PlayerMovement : MonoBehaviour
             movementSpeed = maxSpeed;
         }    
 
-        xMovement = Input.GetAxis("Horizontal");
-        yMovement = Input.GetAxis("Vertical");
+        xMovement = Input.GetAxisRaw("Horizontal");
+        yMovement = Input.GetAxisRaw("Vertical");
 
         jumping = Input.GetKey(KeyCode.Space);
         crouching = Input.GetKey(KeyCode.LeftControl);
@@ -186,12 +186,12 @@ public class PlayerMovement : MonoBehaviour
             float dotProd = Vector3.Dot(transform.up, _hit.normal);
             if(dotProd < 1f)
             {
-                maxSpeedCap = Mathf.Clamp(maxSpeedCap, startingSpeedCap, 750f);
+                maxSpeedCap = Mathf.Clamp(maxSpeedCap, startingSpeedCap, 500f);
                 maxSpeedCap += 1f;
             }
             if(dotProd == 1f)
             {
-                maxSpeedCap = Mathf.Clamp(maxSpeedCap, startingSpeedCap, 750f);
+                maxSpeedCap = Mathf.Clamp(maxSpeedCap, startingSpeedCap, 500f);
                 maxSpeedCap -= 1f;
             }
         }
@@ -241,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
             cam.transform.position = orientation.position;
             if(!isGrounded)
             {
-                maxSpeedCap = Mathf.Clamp(maxSpeedCap, startingSpeedCap, 850f);
+                maxSpeedCap = Mathf.Clamp(maxSpeedCap, startingSpeedCap, 400f);
                 maxSpeedCap += 1f;
             }
         }
