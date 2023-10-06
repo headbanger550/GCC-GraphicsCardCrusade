@@ -22,7 +22,7 @@ MonoBehaviour:
   bullet: {fileID: 0}
   bulletSpeed: 300
   damage: 10
-  fireRate: 2.4
+  fireRate: 2.8
   impactForce: 600
   isRyacast: 1
   isProjectile: 0
