@@ -241,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
             cam.transform.position = orientation.position;
             if(!isGrounded)
             {
-                maxSpeedCap = Mathf.Clamp(maxSpeedCap, startingSpeedCap, 400f);
+                maxSpeedCap = Mathf.Clamp(maxSpeedCap, startingSpeedCap, 500f);
                 maxSpeedCap += 1f;
             }
         }
@@ -290,7 +290,7 @@ public class PlayerMovement : MonoBehaviour
 
     void MovementEffects()
     {
-        if(movementSpeed > 0f)
+        if(movementSpeed > startingSpeed)
         {
             speedLines.SetActive(true);
         }
