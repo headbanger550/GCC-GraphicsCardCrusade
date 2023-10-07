@@ -21,8 +21,8 @@ MonoBehaviour:
   hasShotLine: 1
   bullet: {fileID: 0}
   bulletSpeed: 300
-  damage: 10
-  fireRate: 0.8
+  damage: 12
+  fireRate: 0.6
   impactForce: 600
   isRyacast: 1
   isProjectile: 0

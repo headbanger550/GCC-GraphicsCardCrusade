@@ -22,7 +22,7 @@ MonoBehaviour:
   hasShotLine: 0
   bullet: {fileID: 0}
   bulletSpeed: 300
-  damage: 100
+  damage: 200
   fireRate: 1
   impactForce: 2000
   isRyacast: 1
