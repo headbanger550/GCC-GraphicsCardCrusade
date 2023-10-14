@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float startingSpeed;
     private float startingSpeedCap;
 
-    [SerializeField] float movementSpeed;
+    public float movementSpeed;
     [SerializeField] float maxSpeed;
     [SerializeField] float maxSpeedCap;
 
