@@ -117,13 +117,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   detectionRange: 6
-  spherecastRange: 0
+  spherecastRange: 1.5
   impactEffect: {fileID: 1056220236761477664, guid: 46a1ba2c70624964e848bf2eb52797bd, type: 3}
   damage: 50
   explosiveDamage: 30
+  impactForce: 0
   shouldCollide: 0
-  shouldRaycast: 1
-  shouldSphereCast: 0
+  shouldRaycast: 0
+  shouldSphereCast: 1
   shouldStopInPlace: 0
   isBouncy: 0
   bounceDuration: 0

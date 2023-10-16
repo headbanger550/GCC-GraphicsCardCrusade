@@ -148,7 +148,7 @@ public class Weapon : MonoBehaviour
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
 
-        MoveSway();
+        //MoveSway();
         TiltSway();
 
         if(hasReload)
@@ -177,7 +177,7 @@ public class Weapon : MonoBehaviour
 
         if(!Input.GetMouseButton(0) && !hasReload)
         {
-            MoveSway();
+            //MoveSway();
             gunAnim.SetBool("Shooting", false);
             gunAnim.SetBool("Idle", true);
         }

@@ -61,6 +61,10 @@ public class Bullet : MonoBehaviour
 
     [SerializeField] bool isParticle;
 
+    private Vector3 velocity;
+
+    private RaycastHit _hit;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -84,8 +88,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         if(shouldRaycast)
-        {
-            RaycastHit _hit;
+        { 
             if(Physics.Raycast(transform.position, transform.forward, out _hit, detectionRange))
             {
                 MoveRigidBodies(_hit);
@@ -149,7 +152,6 @@ public class Bullet : MonoBehaviour
         
         if(shouldSphereCast)
         {
-            RaycastHit _hit;
             if(Physics.SphereCast(transform.position, spherecastRange, transform.forward, out _hit, detectionRange))
             {
                 MoveRigidBodies(_hit);
@@ -269,10 +271,17 @@ public class Bullet : MonoBehaviour
             }
 
             Rigidbody rb = damageObject.GetComponent<Rigidbody>();
+            //CharacterController cc = damageObject.GetComponent<CharacterController>();
             if(rb != null)
             {
                 rb.AddExplosionForce(5000, transform.position, explosionRadius);
             }
+
+            /*if(cc != null)
+            {
+                velocity.y = Mathf.Sqrt(500 * -2f * -9.81f);
+                cc.Move(velocity * Time.deltaTime);
+            }*/
         }
     }
 

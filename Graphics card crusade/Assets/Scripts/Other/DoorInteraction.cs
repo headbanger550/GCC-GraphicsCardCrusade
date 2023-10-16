@@ -31,7 +31,7 @@ public class DoorInteraction : MonoBehaviour
                 if(player.movementSpeed >= velocityThreshold)
                 {
                     GameObject obj = Instantiate(doorPng, transform.position, player.transform.localRotation);
-                    obj.GetComponent<Rigidbody>().AddForce(obj.transform.forward * launchForce * Time.deltaTime, ForceMode.Impulse);
+                    obj.GetComponent<Rigidbody>().AddForce(player.movement * launchForce * Time.deltaTime, ForceMode.Impulse);
 
                     Destroy(obj, 1f);
                     Destroy(gameObject);
