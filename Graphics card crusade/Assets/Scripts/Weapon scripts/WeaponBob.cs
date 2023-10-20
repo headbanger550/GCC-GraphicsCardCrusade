@@ -41,7 +41,7 @@ public class WeaponBob : MonoBehaviour
     {
         Vector3 pos = Vector3.zero;
         pos.y = Mathf.Sin(Time.time * frequency) * amplitude;
-        pos.x = Mathf.Cos(Time.time * frequency / 2) * amplitude * 2;
+        pos.z = Mathf.Cos(Time.time * frequency / 2) * amplitude * 2;
 
         transform.localPosition += pos; 
     }

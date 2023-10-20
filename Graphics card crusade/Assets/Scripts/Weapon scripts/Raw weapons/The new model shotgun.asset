@@ -18,11 +18,11 @@ MonoBehaviour:
   - {fileID: 1400833972030809726, guid: ced642c305a163a4b97513254b10ef62, type: 3}
   enemyImpactEffects:
   - {fileID: 7317712962584575195, guid: 4d36a9f26a25df04d87584e0a2e5f8b2, type: 3}
-  hasShotLine: 1
+  hasShotLine: 0
   bullet: {fileID: 0}
   bulletSpeed: 300
   damage: 12
-  fireRate: 0.6
+  fireRate: 1
   impactForce: 600
   isRyacast: 1
   isProjectile: 0
