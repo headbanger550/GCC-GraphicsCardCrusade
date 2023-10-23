@@ -38,7 +38,7 @@ LineRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4955632022234793456}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -72,7 +72,7 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -9.097355, y: 4.547446, z: 35.182243}
+  - {x: 42.369293, y: 2.1669767, z: 9.907871}
   - {x: 0, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
