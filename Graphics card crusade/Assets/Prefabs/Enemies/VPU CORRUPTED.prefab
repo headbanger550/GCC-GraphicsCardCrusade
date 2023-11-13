@@ -1868,7 +1868,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   enemyTypeID: 2
-  firePoint: {fileID: 9063157863986056944}
+  firePoint:
+  - {fileID: 9063157863986056944}
   bullet: {fileID: 3514676018042716726, guid: 464ca2653001aea49a0c74c035d17175, type: 3}
   bulletSpeed: 0
   fireRate: 3

@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int enemyTypeID;
 
     [Header("For ranged enemey")]
-    [SerializeField] Transform firePoint;
+    [SerializeField] Transform[] firePoint;
     [SerializeField] GameObject bullet;
     [SerializeField] float bulletSpeed;
     [SerializeField] float fireRate;
@@ -203,8 +203,11 @@ public class Enemy : MonoBehaviour
     {   
         if(onAttackEffect != null)
         {
-            GameObject instOBJ = Instantiate(onAttackEffect, firePoint.position, onAttackEffect.transform.rotation);
-            Destroy(instOBJ, 1f);
+            for(int i = 0; i < firePoint.Length; i++)
+            {
+                GameObject instOBJ = Instantiate(onAttackEffect, firePoint[i].position, onAttackEffect.transform.rotation);
+                Destroy(instOBJ, 1f);
+            }
         }
 
         PlayerMovement player = target.GetComponent<PlayerMovement>();
@@ -230,17 +233,20 @@ public class Enemy : MonoBehaviour
         if(Time.time >= nextTimeToFire)
         {
             nextTimeToFire = Time.time + 1f / fireRate;
-            InstantiateProjectile(firePoint, bullet, firePoint.rotation);
+            for(int i = 0; i < firePoint.Length; i++)
+            {
+                InstantiateProjectile(firePoint[i], bullet, firePoint[i].rotation);
+            }
         }
     }
     void InstantiateProjectile(Transform shotPoint, GameObject bullet, Quaternion rotation)
     {
         GameObject projectileObj = Instantiate(bullet, shotPoint.position, rotation);
-        projectileObj.GetComponent<Rigidbody>().velocity = (destination - shotPoint.position).normalized * bulletSpeed;
+        projectileObj.GetComponent<Rigidbody>().velocity = shotPoint.forward * bulletSpeed;
         
         if(projectileObj.GetComponent<Rigidbody>() == null)
         {
-            projectileObj.GetComponentInChildren<Rigidbody>().velocity = (destination - shotPoint.position).normalized * bulletSpeed;
+            projectileObj.GetComponentInChildren<Rigidbody>().velocity = shotPoint.forward * bulletSpeed;
         }
     }
 

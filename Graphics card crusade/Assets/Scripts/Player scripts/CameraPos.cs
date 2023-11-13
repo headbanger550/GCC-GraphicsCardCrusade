@@ -7,7 +7,7 @@ public class CameraPos : MonoBehaviour
     [SerializeField] Transform cameraPosition;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         transform.position = cameraPosition.position;
     }

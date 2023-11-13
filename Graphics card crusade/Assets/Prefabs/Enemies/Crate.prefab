@@ -1044,7 +1044,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   enemyTypeID: 2
-  firePoint: {fileID: 7802775542372245948}
+  firePoint:
+  - {fileID: 7802775542372245948}
   bullet: {fileID: 5210767267967205703, guid: c69decb0693a6b4459049e85f582d938, type: 3}
   bulletSpeed: 40
   fireRate: 2
